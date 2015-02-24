@@ -18,6 +18,13 @@ happinessApp.factory('reasons', [function() {
 	return value;
 }]);
 
+happinessApp.factory('scores', [function(){
+    var o = {
+        scores: []
+    };
+    return o;
+}]);
+
 happinessApp.controller('ReasonsController', 
 	[
 		'$scope',
@@ -25,3 +32,14 @@ happinessApp.controller('ReasonsController',
 		listReasons
 	]
 );
+
+happinessApp.controller('ScoreController', [
+    '$scope',
+    'scores',
+    happyScores
+
+]);
+
+$scope.addScore = function(currentScore){
+    $scope.scores.push(currentScore);
+};

@@ -61,10 +61,10 @@ happinessApp.config(function ($stateProvider, $urlRouterProvider) {
 
         .state('happinessScore', {
             url: '/happinessScore',
-            views: {
+
                 templateUrl: 'html/happinessScore.html'
 
-            }
+
 
         });
 

@@ -1,4 +1,19 @@
 <div class="jumbotron text-center">
-    <h2>Add a Happiness Score on The Happiness App</h2>
+    <h2>Add a Happiness Score</h2>
+    <p>How happy are you right now?</p>
 </div>
-<p>My paragraph.</p>
+
+<form ng-submit="addComment()"
+      style="margin-top:30px;">
+    <h3>On a scale of 1 to 10, how happy are you right now?</h3>
+
+    <div class="form-group">
+        <input type="text"
+               class="form-control"
+               placeholder="How Happy Are You Now?"
+               ng-model="body">
+
+        </input>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Score</button>
+</form>
