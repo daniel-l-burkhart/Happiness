@@ -36,10 +36,11 @@ happinessApp.controller('ReasonsController',
 happinessApp.controller('ScoreController', [
     '$scope',
     'scores',
-    happyScores
+    happyScores,
+
+    $scope.addScore = function(currentScore){
+        $scope.scores.push(currentScore);
+    }
 
 ]);
 
-$scope.addScore = function(currentScore){
-    $scope.scores.push(currentScore);
-};

@@ -3,12 +3,12 @@
     <p>How happy are you right now?</p>
 </div>
 
-<form ng-submit="addComment()"
+<form ng-submit="addScore()"
       style="margin-top:30px;">
     <h3>On a scale of 1 to 10, how happy are you right now?</h3>
 
     <div class="form-group">
-        <input type="text"
+        <input type="number"
                class="form-control"
                placeholder="How Happy Are You Now?"
                ng-model="body">
