@@ -38,27 +38,9 @@ happinessApp.controller('ReasonsController',
 happinessApp.controller('ScoreController', [
     '$scope',
     'scores',
-	function($scope, scores) {
-           
-            $scope.scores = scores;
-			$scope.average = averageScore($scope.scores);
-            $scope.addScore = function() {
-                
-                $scope.scores.push({
-                    score: $scope.score
-                });
-              
-            };
-
-        }
+	listScores
 ]);
 
 
-var averageScore = function(nums){
-	var sum = 0;
-	for(var i = 0; i < nums.length; i++){
-		sum += parseInt(nums[i].score, 10);
-	}
-	return sum/nums.length;
-};
+
 
