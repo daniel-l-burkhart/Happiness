@@ -53,7 +53,8 @@ happinessApp.config(function ($stateProvider, $urlRouterProvider) {
         .state('averageHappiness', {
             url: '/averageHappiness',
            
-                templateUrl: 'html/averageHappiness.html'
+                templateUrl: 'html/averageHappiness.html',
+				controller: 'ScoreController'
         })
 
         .state('happinessScore', {

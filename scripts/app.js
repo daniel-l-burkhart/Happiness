@@ -21,10 +21,10 @@ happinessApp.factory('reasons', [function() {
 }]);
 
 happinessApp.factory('scores', [function(){
-    var o = {
-        scores: []
-    };
-    return o;
+    var scores = [];
+	
+    
+    return scores;
 }]);
 
 happinessApp.controller('ReasonsController', 
@@ -40,18 +40,25 @@ happinessApp.controller('ScoreController', [
     'scores',
 	function($scope, scores) {
            
-            $scope.scores = scores.scores;
-
+            $scope.scores = scores;
+			$scope.average = averageScore($scope.scores);
             $scope.addScore = function() {
                 
                 $scope.scores.push({
-                    score: $scope.score,
-                
+                    score: $scope.score
                 });
-               
+              
             };
-
 
         }
 ]);
+
+
+var averageScore = function(nums){
+	var sum = 0;
+	for(var i = 0; i < nums.length; i++){
+		sum += parseInt(nums[i].score, 10);
+	}
+	return sum/nums.length;
+};
 
