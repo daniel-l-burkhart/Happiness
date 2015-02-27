@@ -1,5 +1,7 @@
 var happinessApp = angular.module('HappinessApp', ['ui.router']);
 
+//var happinessScore = angular.module('HappinessScore', ['ui.router']);
+
 happinessApp.factory('reasons', [function() {
 	var value = [
         {
@@ -11,7 +13,7 @@ happinessApp.factory('reasons', [function() {
             description: "Decrease unhappiness"
         },
         {
-            id: 'Lease Important',
+            id: 'Least Important',
             description: "Because we care"
         }
     ];
@@ -36,11 +38,20 @@ happinessApp.controller('ReasonsController',
 happinessApp.controller('ScoreController', [
     '$scope',
     'scores',
-    happyScores,
+	function($scope, scores) {
+           
+            $scope.scores = scores.scores;
 
-    $scope.addScore = function(currentScore){
-        $scope.scores.push(currentScore);
-    }
+            $scope.addScore = function() {
+                
+                $scope.scores.push({
+                    score: $scope.score,
+                
+                });
+               
+            };
 
+
+        }
 ]);
 

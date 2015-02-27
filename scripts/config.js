@@ -52,20 +52,14 @@ happinessApp.config(function ($stateProvider, $urlRouterProvider) {
 
         .state('averageHappiness', {
             url: '/averageHappiness',
-            views: {
+           
                 templateUrl: 'html/averageHappiness.html'
-
-            }
-
         })
 
         .state('happinessScore', {
             url: '/happinessScore',
-
-                templateUrl: 'html/happinessScore.html'
-
-
-
+                templateUrl: 'html/happinessScore.html',
+				controller: 'ScoreController'
         });
 
 });

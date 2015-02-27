@@ -8,12 +8,16 @@
     <h3>On a scale of 1 to 10, how happy are you right now?</h3>
 
     <div class="form-group">
-        <input type="number"
+        <input type="number" min="1" max = "10"
                class="form-control"
                placeholder="How Happy Are You Now?"
-               ng-model="body">
+               ng-model="score">
 
         </input>
     </div>
     <button type="submit" class="btn btn-primary">Submit Score</button>
+	<div ng-repeat = "score in scores">
+{{score.score}} {{scores.length}}
+</div>
 </form>
+
